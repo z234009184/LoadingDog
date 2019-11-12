@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="container">
+
+
+  <view class="topview">
+    <view class="cell">
+      <view class="top">
+        <image class="img" src="/assets/imgs/car_brand.png" mode="widthFix"></image>
+        <text class="title">车载智能控制器</text>
+      </view>
+      <view class="line"></view>
+    </view>
+
+    <view class="cell">
+      <view class="top">
+        <image class="img" src="/assets/imgs/car_brand.png" mode="widthFix"></image>
+        <text class="title">请选择品牌</text>
+        <view class="flex"></view>
+        <view class="arrow"></view>
+      </view>
+      <view class="line"></view>
+    </view>
+
+    <view class="cell">
+      <view class="top">
+        <image class="img" src="/assets/imgs/car_version.png" mode="widthFix"></image>
+        <text class="title">请选择车型</text>
+        <view class="flex"></view>
+        <view class="arrow"></view>
+      </view>
+      <view class="line"></view>
+    </view>
+  </view>
+
+  <view class="find-btn">查询</view>
+
+</view>

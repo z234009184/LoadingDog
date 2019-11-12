@@ -1,0 +1,106 @@
+/* pages/me/me.wxss */
+.container {
+  background-color: #eee;
+}
+
+.bgimg {
+    background-color: #7381DC;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  margin-top: 40rpx;
+}
+
+.name {
+  color: white;
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-top: 40rpx;
+}
+
+.bgimg .bottom {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-self: stretch;
+  margin-top: 40rpx;
+  background-color: #00000033;
+  height: 120rpx;
+}
+
+.bgimg .bottom .line {
+  width: 1%;
+  height: 100%;
+  background-color: #7381DC;
+}
+
+.bgimg .bottom .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 49.5%;
+}
+
+.bgimg .bottom .item .count {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.bgimg .bottom .item .title {
+  font-size: 34rpx;
+}
+
+
+.list-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: white;
+  margin-top: 20rpx;
+  flex-grow: 1;
+}
+
+.list-container .cell {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: white;
+}
+
+.list-container .cell .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin: 30rpx;
+}
+
+.list-container .cell .top .icon {
+  width: 40rpx;
+}
+
+.list-container .cell .top .title {
+  margin-left: 30rpx;
+  flex-grow: 1;
+  font-size: 28rpx;
+}
+
+.list-container .cell .top .arrow {
+  width: 14rpx;
+}
+
+.list-container .cell .line {
+  height: 2rpx;
+  background-color: #eee;
+  margin: 0 30rpx;
+}

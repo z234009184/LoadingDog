@@ -1,0 +1,13 @@
+/* pages/login/login.wxss */
+
+.container {
+  align-items: stretch;
+}
+
+button {
+  width: 80%;
+}
+
+image {
+  width: 100%;
+}

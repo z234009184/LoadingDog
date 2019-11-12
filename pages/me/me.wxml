@@ -1,0 +1,63 @@
+<!--pages/me/me.wxml-->
+<view class="container">
+  <view class="bgimg">
+    <image class="avatar" src="{{ avatarUrl }}" />
+    <text class="name">{{ nickName }}</text>
+
+    <view class="bottom">
+      <view class="item">
+        <text class="count">0</text>
+        <text class="title">余额</text>
+      </view>
+
+      <view class="line"></view>
+
+      <view class="item">
+        <text class="count">0</text>
+        <text class="title">总收益</text>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="list-container">
+    <view class="cell">
+       <view class="top">
+          <image class="icon" src="/assets/imgs/withdraw.png" mode="widthFix"/>
+          <text class="title">提现</text>
+          <image class="arrow" src="/assets/imgs/arrow.png" mode="widthFix"/>
+       </view>
+       <view class="line"></view>
+    </view>
+
+    <view class="cell">
+       <view class="top">
+          <image class="icon" src="/assets/imgs/account.png" mode="widthFix"/>
+          <text class="title">账户明细</text>
+          <image class="arrow" src="/assets/imgs/arrow.png" mode="widthFix"/>
+       </view>
+       <view class="line"></view>
+    </view>
+
+    <view class="cell">
+       <view class="top">
+          <image class="icon" src="/assets/imgs/publish.png" mode="widthFix"/>
+          <text class="title">我发布的</text>
+          <image class="arrow" src="/assets/imgs/arrow.png" mode="widthFix"/>
+       </view>
+       <view class="line"></view>
+    </view>
+
+    <view class="cell">
+       <view class="top">
+          <image class="icon" src="/assets/imgs/buy.png" mode="widthFix"/>
+          <text class="title">我购买的</text>
+          <image class="arrow" src="/assets/imgs/arrow.png" mode="widthFix"/>
+       </view>
+       <view class="line"></view>
+    </view>
+
+
+  </view>
+
+</view>
