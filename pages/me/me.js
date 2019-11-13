@@ -41,10 +41,8 @@ Page({
       success: (res) => {
         console.log(res);
         this.setData({
-          // balance: res.data.data.userInfo.balance,
-          // income: res.data.data.userInfo.income
-          balance: 100,
-          income: 999
+          balance: res.data.data.userInfo.balance,
+          income: res.data.data.userInfo.income
         });
       },
       complete: () => {
