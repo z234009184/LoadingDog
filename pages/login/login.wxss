@@ -2,10 +2,7 @@
 
 .container {
   align-items: stretch;
-}
-
-button {
-  width: 80%;
+  background-color: white;
 }
 
 image {

@@ -10,7 +10,6 @@ Page({
   data: {
 
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -31,36 +30,46 @@ Page({
   },
 
   getUserInfo: function(evt) {
-    console.log(evt.detail.userInfo);
-    wx.user = evt.detail.userInfo;
-    this.jumpHomePage();
-    return ;
+    if (evt.detail.userInfo == 'undefined' || evt.detail.userInfo == null) {
+      return;
+    }
+    wx.showLoading({
+      title: '加载中',
+    });
     wx.login({
       success: (res) => {
         if (res.code) {
-          console.log(res.code);
           // 调用开发者服务器登录
-          this.login(res.code, evt.detail.userIndo);
+          this.login(res.code, evt.detail.userInfo);
         } else {
           console.log('登录失败！' + res.errMsg)
         }
+      },
+      complete: () => {
+        wx.hideLoading();
       }
     });
   },
 
 // 登录
   login: function(code, userInfo) {
+    wx.showLoading({
+      title: '加载中',
+    })
     wx.request({
-      url: '',
+      url: wx.ld_api.getWxOpenIdAndSessionKey,
+      data: {
+        code: code
+      },
       success: (res) => {
-
-        wx.user = evt.detail.userInfo;
-        wx.user.userId = userId
+        console.log(res);
+        wx.user = userInfo;
+        wx.user.userId = res.data.data.userId;
         wx.setStorageSync(UserKey, wx.user);
         this.jumpHomePage();
       },
-      fail: (res) => {
-
+      complete: () => {
+        wx.hideLoading();
       }
     })
   },

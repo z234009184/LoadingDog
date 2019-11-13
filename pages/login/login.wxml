@@ -1,5 +1,5 @@
 <!--pages/login/login.wxml-->
 <view class="container">
   <image src="/assets/imgs/logo.png" mode="widthFix"></image>
-  <button type="primary" form-type="submit" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="getUserInfo">微信授权登录</button>
+  <button class="login-btn" type="primary" form-type="submit" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="getUserInfo">微信授权登录</button>
 </view>
