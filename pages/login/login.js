@@ -66,7 +66,25 @@ Page({
         wx.user = userInfo;
         wx.user.userId = res.data.data.userId;
         wx.setStorageSync(UserKey, wx.user);
+        this.saveWxUserInfo();
         this.jumpHomePage();
+      },
+      complete: () => {
+        wx.hideLoading();
+      }
+    })
+  },
+
+// 微信用户信息保存
+  saveWxUserInfo: function() {
+    wx.showLoading({
+      title: '加载中',
+    })
+    wx.request({
+      url: wx.ld_api.saveWxUserInfo,
+      data: wx.user,
+      success: (res) => {
+        console.log(res);
       },
       complete: () => {
         wx.hideLoading();

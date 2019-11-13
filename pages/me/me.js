@@ -6,7 +6,9 @@ Page({
    */
   data: {
     avatarUrl: null,
-    nickName: null
+    nickName: null,
+    balance: 0,
+    income: 0
   },
 
   /**
@@ -23,48 +25,32 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.queryUserInfoById();
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+// 获取用户信息
+  queryUserInfoById: function() {
+    wx.showLoading({
+      title: '加载中',
+    })
+    wx.request({
+      url: wx.ld_api.queryUserInfoById,
+      data: {
+        userId: wx.user.userId
+      },
+      success: (res) => {
+        console.log(res);
+        this.setData({
+          // balance: res.data.data.userInfo.balance,
+          // income: res.data.data.userInfo.income
+          balance: 100,
+          income: 999
+        });
+      },
+      complete: () => {
+        wx.hideLoading();
+      }
+    })
   }
+
 })
