@@ -1,0 +1,38 @@
+/* pages/install_list/install_list.wxss */
+
+.title {
+  width: 100%;
+  padding: 40rpx 40rpx 20rpx 40rpx;
+  background-color: white;
+  text-align: end;
+}
+.price {
+  width: 100%;
+  padding: 20rpx 40rpx 40rpx 40rpx;
+  background-color: white;
+  text-align: end;
+}
+
+.install {
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+image {
+  width: 135rpx;
+}
+
+.tip {
+  margin-top: 20rpx;
+  color: #999;
+  font-size: 22rpx;
+}
+
+.create {
+  margin-top: 30rpx;
+  color: #7381DC;
+  font-size: 28rpx;
+}

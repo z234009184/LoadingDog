@@ -1,0 +1,46 @@
+/* pages/create/create.wxss */
+.container {
+    background-color: white;
+    padding: 30rpx;
+    align-items: flex-start;
+    font-size: 28rpx;
+}
+
+.title-box {
+    margin-top: 40rpx;
+    display: flex;
+    align-self: stretch;
+}
+
+.textarea {
+    width: 70%;
+    border: 2rpx solid #eee;
+    border-radius: 15rpx;
+    margin-left: 30rpx;
+    height: 150rpx;
+    padding: 20rpx;
+}
+
+.imgs-box {
+    margin-top: 60rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img-container {
+    margin-left: 30rpx;
+    width: 500rpx;
+}
+
+.img-container .image {
+    margin-left: 30rpx;
+    margin-bottom: 30rpx;
+    width: 200rpx;
+}
+
+.cu-btn {
+    align-self: center;
+    width: 80%;
+    height: 90rpx;
+    border-radius: 10rpx;
+}

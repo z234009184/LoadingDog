@@ -11,20 +11,20 @@
       <view class="line"></view>
     </view>
 
-    <view class="cell">
+    <view class="cell" bindtap="showModal" data-target="DrawerModalR" data-type="brand">
       <view class="top">
         <image class="img" src="/assets/imgs/car_brand.png" mode="widthFix"></image>
-        <text class="title">请选择品牌</text>
+        <text class="title">{{selectedBrand.name}}</text>
         <view class="flex"></view>
         <view class="arrow"></view>
       </view>
       <view class="line"></view>
     </view>
 
-    <view class="cell">
+    <view class="cell" bindtap="showModal" data-target="DrawerModalR" data-type="version">
       <view class="top">
         <image class="img" src="/assets/imgs/car_version.png" mode="widthFix"></image>
-        <text class="title">请选择车型</text>
+        <text class="title">{{selectedVersion.carCategoryName}}</text>
         <view class="flex"></view>
         <view class="arrow"></view>
       </view>
@@ -32,6 +32,54 @@
     </view>
   </view>
 
-  <view class="find-btn">查询</view>
+  <view class="find-btn" bindtap="onClickQuery">查询</view>
 
+</view>
+
+
+<view class="cu-modal drawer-modal justify-end {{modalName=='DrawerModalR'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog basis-lg" catchtap='' style="height:calc(100vh)">
+
+    <block wx:if="{{ type == 'brand' }}">
+
+      <scroll-view scroll-y class="indexes" scroll-into-view="indexes-{{listCurID}}" style="height:calc(100vh)" scroll-with-animation="true" enable-back-to-top="true">
+        <block wx:for="{{brandlist}}" wx:key>
+        <!-- section -->
+          <view class="padding indexItem-{{brandlist[index].letter}}" id="indexes-{{brandlist[index].letter}}" data-index="{{brandlist[index].letter}}">{{brandlist[index].letter}}</view>
+          <view class="cu-list menu-avatar no-padding">
+            <!-- item -->
+            <view class="cu-item" wx:for="{{brandlist[index].list}}" wx:key wx:for-index="sub" bindtap="onClickBrand" data-section="{{index}}" data-item="{{sub}}">
+              <view class="cu-avatar round">{{brandlist[index].letter}}</view>
+              <text class="cu-title">{{item.name}}</text>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+
+      <!-- 索引条 -->
+      <view class="indexBar" style="height:calc(100vh)">
+        <view class="indexBar-box" bindtouchstart="tStart" bindtouchend="tEnd" catchtouchmove="tMove">
+          <view class="indexBar-item" wx:for="{{brandlist}}" wx:key id="{{index}}" bindtouchstart="getCur" bindtouchend="setCur">{{brandlist[index].letter}}</view>
+        </view>
+      </view>
+      <!-- 索引条toast是否显示-->
+      <view hidden="{{hidden}}" class="indexToast">
+        {{listCur}}
+      </view>
+    </block>
+
+    <block wx:elif="{{ type == 'version' }}">
+      <scroll-view scroll-y style="height:calc(100vh)" scroll-with-animation="true" enable-back-to-top="true">
+        <view class="version-cell" wx:for="{{carTypeList}}" wx:key bindtap="onClidkVersion" data-item="{{index}}">
+          <text class="version-title">{{item.carCategoryName}}</text>
+          <view class="version-divider"></view>
+        </view>
+      </scroll-view>
+    
+    </block>
+
+
+
+
+  </view>
 </view>

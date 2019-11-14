@@ -1,0 +1,15 @@
+<!--pages/install_list/install_list.wxml-->
+<view class="container">
+  <block wx:if="{{ installation != null }}">
+    <view class="title" bindtap="onClickInstall">{{ installation.carBrandName + installation.carTypeName }} 安装图</view>
+    <view class="price" bindtap="onClickInstall">¥5.00</view>
+  </block>
+  <block wx:else>
+    <view class="install" bindtap="onClickCreate">
+      <image src="/assets/imgs/add.png" mode="widthFix"></image>
+      <text class="tip">还没有人发布该安装图</text>
+      <text class="create">立即创建</text>
+    </view>
+
+  </block>
+</view>
