@@ -1,0 +1,46 @@
+/* pages/install_detail/install_detail.wxss */
+
+page {
+    background-color: white;
+}
+
+.container {
+    background-color: white;
+    padding: 30rpx;
+    align-items: flex-start;
+    font-size: 28rpx;
+}
+
+
+.title-box {
+    margin-top: 40rpx;
+    display: flex;
+    align-self: stretch;
+}
+
+.step {
+    white-space: nowrap;
+}
+
+.title {
+    margin-left: 30rpx;
+}
+
+.imgs-box {
+    margin-top: 60rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img-container {
+    margin-left: 30rpx;
+    width: 500rpx;
+}
+
+.img-container .image {
+    margin-left: 30rpx;
+    margin-bottom: 30rpx;
+    width: 200rpx;
+    height: 200rpx;
+    background-color: #eee;
+}

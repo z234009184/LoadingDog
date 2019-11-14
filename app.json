@@ -1,10 +1,11 @@
 {
   "pages": [
-    "pages/create/create",
+    "pages/install_detail/install_detail",
     "pages/login/login",
     "pages/index/index",
     "pages/me/me",
-    "pages/install_list/install_list"
+    "pages/install_list/install_list",
+    "pages/create/create"
   ],
   "window": {
     "backgroundTextStyle": "light",

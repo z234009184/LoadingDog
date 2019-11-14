@@ -1,0 +1,15 @@
+<!-- pages/install_detail/install_detail.wxml -->
+<view class="container">
+    <block wx:for="{{3}}">
+        <view class="title-box">
+            <view class="step">步骤1:</view>
+            <text class="title">文案站位</text>
+        </view>
+        <view class="imgs-box">
+            <text class="img-title">图片:</text>
+            <view class="img-container">
+                <image class="image" src="/assets/imgs/placeholder.png" mode="aspectFill" wx:for="{{4}}" wx:key />
+            </view>
+        </view>
+    </block>
+</view>

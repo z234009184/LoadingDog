@@ -17,16 +17,17 @@ Page({
 
   // 下一步
   onClickNext: function () {
-    console.log(123);
     wx.navigateTo({
-      url: '../create/create',
+      url: './create',
     })
       
   },
 
   // 完成
   onClickFinish: function () {
-
+    wx.navigateTo({
+      url: '../install_detail/install_detail',
+    })
   }
 
 })
