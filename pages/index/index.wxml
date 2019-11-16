@@ -32,7 +32,7 @@
     </view>
   </view>
 
-  <view class="cu-btn bg-orange  radius" bindtap="onClickQuery">查询</view>
+  <view class="cu-btn bg-orange radius" bindtap="onClickQuery">查询</view>
 
 </view>
 

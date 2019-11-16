@@ -1,2 +1,14 @@
 <!--pages/my_buyed/my_buyed.wxml-->
-<text>pages/my_buyed/my_buyed.wxml</text>
+<view class="container">
+    <block wx:for="{{5}}">
+        <view class="cell">
+            <text class="title">2019款 PlusA8L 50TFSI quattro舒适型 安装图</text>
+                <view class="bottom-wraper">
+                    <text class="time">购买时间: 2019-09-09 12:12:12</text>
+                    <text class="status">¥ 5.00元</text>
+                </view>
+        </view>
+    </block>
+      
+
+</view>

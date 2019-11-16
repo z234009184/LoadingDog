@@ -63,6 +63,18 @@ Page({
     wx.navigateTo({
       url: '../account_list/account_list',
     });
-  }
+  },
+
+  onClickMyPublished: function () {
+    wx.navigateTo({
+      url: '../my_published/my_published',
+    });
+  },
+
+  onClickMyBuyed: function () {
+    wx.navigateTo({
+      url: '../my_buyed/my_buyed',
+    });
+  },
 
 })

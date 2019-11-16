@@ -1,1 +1,36 @@
 /* pages/account_list/account_list.wxss */
+
+.container {
+    background-color: #eee;
+}
+
+.cell {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40rpx;
+    background-color: white;
+    margin-top: 10rpx;
+}
+
+.cell .left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cell .left .title {
+    font-size: 34rpx;
+}
+
+.cell .left .time {
+    margin-top: 20rpx;
+    font-size: 28rpx;
+    color: #999;
+}
+
+.cell .price {
+    color: #41BE37;
+    font-size: 38rpx;
+}

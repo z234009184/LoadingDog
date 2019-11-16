@@ -1,2 +1,15 @@
 <!--pages/account_list/account_list.wxml-->
-<text>pages/account_list/account_list.wxml</text>
+<view class="container">
+    <block wx:for="{{5}}">
+        <view class="cell">
+                <view class="left">
+                    <text class="title">发布安装图</text>
+                    <text class="time">2019-09-09 12:12:12</text>
+                </view>
+                <text class="price">+ 50.00 元</text>
+            
+        </view>
+    </block>
+      
+
+</view>
