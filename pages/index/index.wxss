@@ -42,7 +42,6 @@
 .topview .cell .top .arrow {
   width: 20rpx;
   height: 20rpx;
-  /* background-color: red; */
   border: 2rpx solid #ddd;
   border-left: none;
   border-bottom: none;
@@ -56,17 +55,13 @@
 }
 
 
-.find-btn {
-  align-self: stretch;
-  margin: 70rpx;
-  height: 100rpx;
-  border-radius: 20rpx;
-  background-color: #FFB367;
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  line-height: 100rpx;
-  font-size: 30rpx;
+.cu-btn {
+    margin: 70rpx;
+
+    height: 100rpx;
+    width: 80%;
+    font-size: 34rpx;
+    font-weight: bold;
 }
 
 

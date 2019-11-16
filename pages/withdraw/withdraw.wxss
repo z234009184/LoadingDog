@@ -1,0 +1,45 @@
+/* pages/withdraw/withdraw.wxss */
+
+.container {
+    padding: 60rpx;
+    align-items: flex-start;
+}
+
+.input-wraper {
+    align-self: center;
+    margin: 40rpx 0;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 50rpx;
+}
+
+.input {
+    margin-left: 30rpx;
+    width: 450rpx;
+    height: 90rpx;
+    border: 2rpx solid #ddd;
+    border-radius: 10rpx;
+    padding: 20rpx;
+}
+
+.line {
+    margin: 40rpx 0;
+    height: 2rpx;
+    background-color: #ddd;
+    align-self: center;
+    width: 100%;
+}
+
+
+.cu-btn {
+    margin-top: 100rpx;
+    align-self: center;
+    height: 100rpx;
+    width: 80%;
+    font-size: 34rpx;
+    font-weight: bold;
+}
+

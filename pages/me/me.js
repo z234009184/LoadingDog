@@ -49,6 +49,14 @@ Page({
         wx.hideLoading();
       }
     })
+  },
+
+  // 提现
+  onClickWithdraw: function() {
+    wx.navigateTo({
+      url: '../withdraw/withdraw',
+    });
+      
   }
 
 })

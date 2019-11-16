@@ -1,18 +1,20 @@
 {
   "pages": [
-    "pages/install_detail/install_detail",
     "pages/login/login",
     "pages/index/index",
     "pages/me/me",
     "pages/install_list/install_list",
-    "pages/create/create"
+    "pages/create/create",
+    "pages/install_detail/install_detail",
+    "pages/withdraw/withdraw"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#7381DC",
     "navigationBarTitleText": "装车狗",
     "navigationBarTextStyle": "white"
-  },
+  },  
+
   "tabBar": {
     "color": "#CCCCCC",
     "selectedColor": "#7381DC",
@@ -21,7 +23,7 @@
         "pagePath": "pages/index/index",
         "iconPath": "/assets/imgs/tabbar_install.png",
         "selectedIconPath": "/assets/imgs/tabbar_install_selected.png",
-        "text": "首页"
+        "text": "安装"
       },
       {
         "pagePath": "pages/me/me",

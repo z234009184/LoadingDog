@@ -55,6 +55,16 @@
   font-weight: bold;
 }
 
+.bgimg .bottom .item .title-wraper {
+  display: flex;
+  align-items: center;
+}
+
+.bgimg .bottom .item .icon {
+  width: 40rpx;
+  margin-right: 16rpx;
+}
+
 .bgimg .bottom .item .title {
   font-size: 34rpx;
 }
