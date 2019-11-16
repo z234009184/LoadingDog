@@ -1,20 +1,25 @@
 <!--pages/account_list/account_list.wxml-->
+<wxs module="handle">
+    var titleString = function (type) {
+        switch (type) {
+            case 1:
+                return "发布安装图";
+            case 2:
+                return "其他用户购买我的安装图";
+            case 3:
+                return "提现";
+            default :
+                return "其他";
+        }
+    }
+    module.exports.titleString = titleString; 
+</wxs>
+
 <view class="container">
     <block wx:for="{{ listMap }}" wx:key>
         <view class="cell">
                 <view class="left">  
-                    <block wx:if="{{ item.type == 1 }}">
-                        <text class="title">发布安装图</text>    
-                    </block>
-                    <block wx:elif="{{ item.type == 2 }}">
-                        <text class="title">其他用户购买我的安装图</text>    
-                    </block>
-                    <block wx:elif="{{ item.type == 3 }}">
-                        <text class="title">提现</text>    
-                    </block>
-                    <block wx:else>
-                        <text class="title">其他</text>    
-                    </block>
+                    <text class="title">{{ handle.titleString(item.type) }}</text>
                     <text class="time">{{ item.createTime }}</text>
                 </view>
 
@@ -28,7 +33,6 @@
     </block>
 </view>
 
-<view class="empty-wraper" wx:if="{{ listMap.length == 0 }}">
-    <image src="/assets/imgs/empty_data.png" mode="widthFix"/>
-    <text>暂无数据</text>
-</view>
+
+<import src="../common/common.wxml" />
+<template is="empty-view" wx:if="{{ listMap.length == 0 }}" />

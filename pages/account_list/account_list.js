@@ -30,10 +30,10 @@ Page({
         const tempArr = res.data.data.listMap;
         // 如果当前页码为第一页
         if (this.data.page == 1) {
-          // this.setData({
-          //   listMap: [{type: 1, fee: '5.00', createTime: '2019-12-19 13:59:00'}]
-          // })
-          this.data.listMap.length = 0;
+          this.setData({
+            listMap: [{type: 1, fee: '5.00', createTime: '2019-12-19 13:59:00'}]
+          })
+          // this.data.listMap.length = 0;
         }
         this.setData({
           listMap: this.data.listMap.concat(tempArr)

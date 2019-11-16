@@ -1,0 +1,6 @@
+<template name="empty-view">
+    <view class="empty-wraper">
+        <image src="/assets/imgs/empty_data.png" mode="widthFix"/>
+        <text>暂无数据</text>
+    </view>
+</template>
