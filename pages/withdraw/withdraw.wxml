@@ -8,6 +8,5 @@
     <view class="line"></view>
     <text class="title">账户余额：10元</text>
 
-
     <view class="cu-btn bg-orange margin-tb-sm radius">提现到微信零钱</view>
 </view>

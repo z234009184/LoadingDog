@@ -1,7 +1,5 @@
 // pages/login/login.js
 
-const UserKey = 'UserKey';
-
 Page({
 
   /**
@@ -14,10 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.user = {};
-    // 0.默认进入登录页面
-    // 1.从沙盒中取出 wx.user 
-    wx.user = wx.getStorageSync(UserKey);
+    // 1.默认进入登录页面 
     // 2.取出如果wx.user.userId为空 表示从未登录过 (如果不为空 则跳转步骤7)
     if (wx.user.userId != "undefined" && wx.user.userId != null && wx.user.userId != "") {
       this.jumpHomePage();
@@ -65,7 +60,7 @@ Page({
         console.log(res);
         wx.user = userInfo;
         wx.user.userId = res.data.data.userId;
-        wx.setStorageSync(UserKey, wx.user);
+        wx.setStorageSync(wx.user.UserKey, wx.user);
         this.saveWxUserInfo();
         this.jumpHomePage();
       },

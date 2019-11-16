@@ -14,3 +14,22 @@ page {
   justify-content: start;
   box-sizing: border-box;
 } 
+
+.empty-wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: fixed;
+  left: 247rpx;
+  top: 539rpx;
+}
+
+.empty-wraper image {
+  width: 256rpx;
+}
+
+.empty-wraper text {
+  margin-top: 20rpx;
+  color: #999;
+}

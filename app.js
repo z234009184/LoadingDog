@@ -11,6 +11,8 @@ App({
    */
   onLaunch: function () {
 
+    this.checkUser();
+
     this.registerAPI();
 
     wx.getSystemInfo({
@@ -26,6 +28,14 @@ App({
       }
     })
   },
+
+  checkUser: function () {
+    wx.user = {};
+    wx.user.userId = null;
+    wx.user.UserKey = 'UserKey';
+    wx.user = wx.getStorageSync(wx.user.UserKey);
+  },
+
   // 服务器API
   registerAPI: function() {
     wx.ld_api = {};
