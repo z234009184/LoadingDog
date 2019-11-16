@@ -37,7 +37,7 @@
        <view class="line"></view>
     </view>
 
-    <view class="cell">
+    <view class="cell" bind:tap="onClickAccountList">
        <view class="top">
           <image class="icon" src="/assets/imgs/account.png" mode="widthFix"/>
           <text class="title">账户明细</text>

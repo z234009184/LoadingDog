@@ -6,15 +6,17 @@
     "pages/install_list/install_list",
     "pages/create/create",
     "pages/install_detail/install_detail",
-    "pages/withdraw/withdraw"
+    "pages/withdraw/withdraw",
+    "pages/account_list/account_list",
+    "pages/my_published/my_published",
+    "pages/my_buyed/my_buyed"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#7381DC",
     "navigationBarTitleText": "装车狗",
     "navigationBarTextStyle": "white"
-  },  
-
+  },
   "tabBar": {
     "color": "#CCCCCC",
     "selectedColor": "#7381DC",

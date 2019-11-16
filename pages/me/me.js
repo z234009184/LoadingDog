@@ -57,6 +57,12 @@ Page({
       url: '../withdraw/withdraw',
     });
       
+  },
+
+  onClickAccountList: function() {
+    wx.navigateTo({
+      url: '../account_list/account_list',
+    });
   }
 
 })
