@@ -1,14 +1,51 @@
 <!--pages/my_published/my_published.wxml-->
+
+<wxs module="handle">
+    var statusString = function (status) {
+        switch (status) {
+            case 0:
+                return '提交未审核';
+            case 1:
+                return '审核通过';
+            case 2:
+                return '审核拒绝';
+            default :
+                return '未知';
+        } 
+    }
+    var colorString = function (status) {
+        switch (status) {
+            case 0:
+                return '#7381DC';
+            case 1:
+                return '#41BE37';
+            case 2:
+                return 'red';
+            default :
+                return 'red';
+        } 
+    }
+
+    module.exports = {
+        statusString: statusString,
+        colorString: colorString
+    };
+</wxs>
+
 <view class="container">
-    <block wx:for="{{5}}">
+    <block wx:for="{{ installList }}">
         <view class="cell">
-            <text class="title">2019款 PlusA8L 50TFSI quattro舒适型 安装图</text>
+            <text class="title">{{ item.carBrandName + ' ' + item.carTypeName }} 安装图</text>
                 <view class="bottom-wraper">
-                    <text class="time">2019-09-09 12:12:12</text>
-                    <text class="status">审核通过</text>
+                    <text class="time">{{ item.createTime }}</text>
+                    <text class="status" style="color: {{ handle.colorString(item.status) }};" >{{ handle.statusString(item.status) }}</text>
                 </view>
         </view>
     </block>
       
 
 </view>
+
+
+<import src="../common/common.wxml" />
+<template is="empty-view" wx:if="{{ installList.length == 0 }}" />

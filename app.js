@@ -48,8 +48,8 @@ App({
     wx.ld_api.addInstallStep = domain + 'addInstallStep.shtml';
     wx.ld_api.addInstallImage = domain + 'addInstallImage.shtml';
     wx.ld_api.queryInstallationByCarBrandAndTypeId = domain + 'queryInstallationByCarBrandAndTypeId.shtml';
-    wx.ld_api.queryInstallStepAndImageInfo = domain + 'queryInstallStepAndImageInfo';
-    wx.ld_api.queryInstallationByUserIdWithPage = domain + 'queryInstallationByUserIdWithPage';
+    wx.ld_api.queryInstallStepAndImageInfo = domain + 'queryInstallStepAndImageInfo.shtml';
+    wx.ld_api.queryInstallationByUserIdWithPage = domain + 'queryInstallationByUserIdWithPage.shtml';
     wx.ld_api.queryAccountDetailByUserId = domain + 'queryAccountDetailByUserId.shtml';
     wx.ld_api.queryPurchaseRecordByUserId = domain + 'queryPurchaseRecordByUserId.shtml';
   },
