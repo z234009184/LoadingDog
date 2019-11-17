@@ -54,7 +54,7 @@ App({
     wx.ld_api.queryInstallationByUserIdWithPage = domain + 'queryInstallationByUserIdWithPage.shtml';
     wx.ld_api.queryAccountDetailByUserId = domain + 'queryAccountDetailByUserId.shtml';
     wx.ld_api.queryPurchaseRecordByUserId = domain + 'queryPurchaseRecordByUserId.shtml';
-    wx.ld_api.uploadFile = domain + 'uploadFile.shtml';
+    wx.ld_api.uploadFile = domain + 'file/uploadFile.shtml';
   },
 
 })

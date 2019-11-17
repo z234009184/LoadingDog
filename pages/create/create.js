@@ -20,9 +20,10 @@ Page({
     });
   },
 
-  
-
-
+// 图片上传接口
+  uploadFile: function (filePath) {
+      
+  },
 
 // 8、添加安装步骤信息（文字描述）
   addInstallStep: function () {
