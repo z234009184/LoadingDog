@@ -1,6 +1,6 @@
 <!--pages/create/create.wxml-->
 <view class="container">
-  <view class="step">步骤1:</view>
+  <view class="step">步骤{{ stepNumber }}:</view>
   <view class="title-box">
     <text class="title">文字描述:</text>
     <textarea class="textarea" placeholder="请输入文字描述"></textarea>

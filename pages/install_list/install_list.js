@@ -12,9 +12,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-    return;
-
     console.log(options);
     const carBrandId = options.carBrandId;
     const carTypeId = options.carTypeId;
@@ -48,15 +45,39 @@ Page({
 
 // 点击安装 去支付
   onClickInstall: function() {
-
+    
   },
 
 // 点击创建
   onClickCreate: function() {
-    wx.navigateTo({
-      url: '../create/create',
+    this.addInstallation(this.data.carBrandId, this.data.carTypeId);
+  },
+
+  // 7、添加安装图信息
+  addInstallation: function (carBrandId, carTypeId) {
+    wx.showNavigationBarLoading();
+    wx.showLoading({
+      title: '请稍等',
+    });
+    wx.request({
+      url: wx.ld_api.addInstallation,
+      data: {
+        userId: wx.user.userId,
+        carBrandId: carBrandId,
+        carTypeId: carTypeId
+      },
+      success: (res) => {
+        console.log(res);
+        wx.navigateTo({
+          url: '../create/create?installId=' + res.data.data.installId + '&stepNumber=1',
+        })
+      },
+      complete: () => {
+        wx.hideLoading();
+        wx.hideNavigationBarLoading();
+      }
     })
-  }
+  },
 
   
 })
