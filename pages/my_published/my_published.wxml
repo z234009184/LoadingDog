@@ -34,7 +34,7 @@
 
 <view class="container">
     <block wx:for="{{ installList }}">
-        <view class="cell">
+        <view class="cell" bindtap="onClickItem" data-id="{{ item.id }}">
             <text class="title">{{ item.carBrandName + ' ' + item.carTypeName }} 安装图</text>
                 <view class="bottom-wraper">
                     <text class="time">{{ item.createTime }}</text>

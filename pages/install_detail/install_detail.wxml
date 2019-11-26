@@ -1,14 +1,16 @@
 <!-- pages/install_detail/install_detail.wxml -->
 <view class="container">
-    <block wx:for="{{3}}">
+    <block wx:for="{{ listMap }}" wx:key>
         <view class="title-box">
-            <view class="step">步骤1:</view>
-            <text class="title">文案站位</text>
+            <view class="step">步骤{{ item.stepInfo.stepNumber }}:</view>
+            <text class="title">{{ item.stepInfo.title }}</text>
         </view>
         <view class="imgs-box">
             <text class="img-title">图片:</text>
             <view class="img-container">
-                <image class="image" src="/assets/imgs/placeholder.png" mode="aspectFill" wx:for="{{4}}" wx:key />
+              <block wx:for="{{ item.imageInfo }}" wx:key="unique" wx:for-item="img">
+                <image class="image" src="{{ domainImage + img.imageUrl }}" mode="aspectFill" bindtap="onClickImg" data-src="{{ domainImage + img.imageUrl }}" data-imgInfos="{{ item.imageInfo }}"/>
+              </block>
             </view>
         </view>
     </block>

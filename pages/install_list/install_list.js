@@ -13,8 +13,8 @@ Page({
    */
   onLoad: function (options) {
     console.log(options);
-    const carBrandId = options.carBrandId;
-    const carTypeId = options.carTypeId;
+    const carBrandId = options.carBrandId; // 33
+    const carTypeId = options.carTypeId; // 471
     this.setData({
       carBrandId: carBrandId,
       carTypeId: carTypeId
@@ -45,7 +45,10 @@ Page({
 
 // 点击安装 去支付
   onClickInstall: function() {
-    
+    // 先支付
+    wx.navigateTo({
+      url: `../install_detail/install_detail?installId=${this.data.installation.id}`,
+    })
   },
 
 // 点击创建

@@ -3,12 +3,27 @@
   <view class="step">步骤{{ stepNumber }}:</view>
   <view class="title-box">
     <text class="title">文字描述:</text>
-    <textarea class="textarea" placeholder="请输入文字描述"></textarea>
+    <textarea class="textarea" bindinput="onChangeText" placeholder="请输入文字描述"></textarea>
   </view>
     <view class="imgs-box">
       <text class="img-title">图片上传:</text>
       <view class="img-container">
-        <image class="image" src="/assets/imgs/add.png" mode="widthFix" wx:for="{{4}}" wx:key/>    
+
+          <view class="weui-uploader__bd">
+              <view class="weui-uploader__files" id="uploaderFiles">
+                <block wx:for="{{files}}" wx:key="*this">
+                  <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+                </block>
+              </view>
+
+              <view class="weui-uploader__input-box">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+          </view>
+
+
       </view>
     </view>
       

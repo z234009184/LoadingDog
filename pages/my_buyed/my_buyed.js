@@ -50,6 +50,12 @@ Page({
       
   },
 
+  onClickItem: function (e) {
+    wx.navigateTo({
+      url: `../install_detail/install_detail?installId=${e.currentTarget.dataset.id}`,
+    })
+  },
+
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */

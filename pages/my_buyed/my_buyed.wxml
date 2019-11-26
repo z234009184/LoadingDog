@@ -1,7 +1,7 @@
 <!--pages/my_buyed/my_buyed.wxml-->
 <view class="container">
     <block wx:for="{{ listMap }}">
-        <view class="cell">
+        <view class="cell" bindtap="onClickItem" data-id="{{ item.installId }}">
             <text class="title">{{ item.installId }} 安装图</text>
                 <view class="bottom-wraper">
                     <text class="time">购买时间: {{ item.createTime }}</text>

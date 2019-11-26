@@ -12,8 +12,11 @@
     align-self: stretch;
 }
 
+.title {
+  white-space: nowrap;
+}
+
 .textarea {
-    width: 70%;
     border: 2rpx solid #eee;
     border-radius: 15rpx;
     margin-left: 30rpx;
@@ -30,12 +33,11 @@
 .img-container {
     margin-left: 30rpx;
     width: 500rpx;
+    margin-bottom: 80rpx;
 }
 
-.img-container .image {
-    margin-left: 30rpx;
-    margin-bottom: 30rpx;
-    width: 200rpx;
+.weui-uploader__file {
+  border: 2rpx solid #eee;
 }
 
 .cu-btn {

@@ -2,6 +2,7 @@
 @import "colorui/main.wxss";
 @import "colorui/icon.wxss";
 @import "colorui/animation.wxss";
+@import "weui/style/weui.wxss";
 
 page {
   height: 100%;

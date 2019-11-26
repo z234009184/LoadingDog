@@ -40,7 +40,8 @@ App({
   registerAPI: function() {
     wx.ld_api = {};
     wx.ld_api.domain = domain;
-    wx.ld_api.domainImage = 'http://www.yunzhangxing.cn/staticgfs/'
+    wx.ld_api.domainImage = 'http://www.yunzhangxing.cn/staticgfs/';
+    
     wx.ld_api.getWxOpenIdAndSessionKey = domain + 'getWxOpenIdAndSessionKey.shtml'; // code
     wx.ld_api.saveWxUserInfo = domain + 'saveWxUserInfo.shtml';
     wx.ld_api.queryUserInfoById = domain + 'queryUserInfoById.shtml';

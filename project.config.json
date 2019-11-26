@@ -41,13 +41,36 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"gamePlugin": {
 			"current": -1,
 			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/create/create",
+					"pathName": "pages/create/create",
+					"query": "installId=10&stepNumber=1",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pages/install_detail/install_detail",
+					"pathName": "pages/install_detail/install_detail",
+					"query": "installId=8",
+					"scene": null
+				}
+			]
 		}
 	}
 }
