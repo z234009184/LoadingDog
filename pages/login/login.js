@@ -60,7 +60,9 @@ Page({
         console.log(res);
         wx.user = userInfo;
         wx.user.userId = res.data.data.userId;
-        wx.setStorageSync(wx.user.UserKey, wx.user);
+        console.log(wx.user);
+        wx.setStorageSync('UserKey', wx.user);
+        
         this.saveWxUserInfo();
         this.jumpHomePage();
       },

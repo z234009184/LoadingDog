@@ -1,6 +1,6 @@
 //app.js
 
-const domain = 'http://101.201.66.75:8083/edog/';
+const domain = 'https://www.yunzhangxing.cn/edog/';
 
 App({
   globalData: {
@@ -32,15 +32,15 @@ App({
   checkUser: function () {
     wx.user = {};
     wx.user.userId = null;
-    wx.user.UserKey = 'UserKey';
-    wx.user = wx.getStorageSync(wx.user.UserKey);
+    wx.user = wx.getStorageSync('UserKey');
+    console.log(wx.user);
   },
 
   // 服务器API
   registerAPI: function() {
     wx.ld_api = {};
     wx.ld_api.domain = domain;
-    wx.ld_api.domainImage = 'http://www.yunzhangxing.cn/staticgfs/';
+    wx.ld_api.domainImage = 'https://www.yunzhangxing.cn/staticgfs/';
     
     wx.ld_api.getWxOpenIdAndSessionKey = domain + 'getWxOpenIdAndSessionKey.shtml'; // code
     wx.ld_api.saveWxUserInfo = domain + 'saveWxUserInfo.shtml';
