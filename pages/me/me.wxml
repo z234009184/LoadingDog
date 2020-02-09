@@ -2,7 +2,7 @@
 <view class="container">
   <view class="bgimg">
     <image class="avatar" src="{{ avatarUrl }}" />
-    <text class="name">{{ nickName }}</text>
+    <text class="name" bindtap="onTapLogin">{{ nickName }}</text>
 
     <view class="bottom">
       <view class="item">

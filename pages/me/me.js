@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    avatarUrl: null,
-    nickName: null,
+    avatarUrl: "/assets/imgs/login_avatar.png",
+    nickName: "点击登录",
     balance: 0,
     income: 0
   },
@@ -21,11 +21,21 @@ Page({
     });
   },
 
+  onShow: function() {
+    if (wx.user.userId == null) return ;
+    this.setData({
+      avatarUrl: wx.user.avatarUrl,
+      nickName: wx.user.nickName
+    });
+    console.log(wx.user.userId);
+    this.queryUserInfoById();
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    this.queryUserInfoById();
+    
   },
 
 // 获取用户信息
@@ -40,9 +50,15 @@ Page({
       },
       success: (res) => {
         console.log(res);
+        var balance = 0;
+        var income = 0;
+        if (res.data.data.userInfo != null && res.data.data.userInfo != "undefined") {
+          balance = res.data.data.userInfo.balance || 0;
+          income = res.data.data.userInfo.income || 0;
+        }
         this.setData({
-          balance: res.data.data.userInfo.balance,
-          income: res.data.data.userInfo.income
+          balance: balance,
+          income: income
         });
       },
       complete: () => {
@@ -51,8 +67,26 @@ Page({
     })
   },
 
+  // 登录
+  onTapLogin: function() {
+    if (wx.user.userId == null) {
+      wx.navigateTo({
+        url: '../login/login',
+      });
+      return;
+    }
+  },
+
+
   // 提现
   onClickWithdraw: function() {
+    if (wx.user.userId == null) {
+      wx.navigateTo({
+        url: '../login/login',
+      });
+      return;
+    }
+
     wx.navigateTo({
       url: '../withdraw/withdraw',
     });
@@ -60,18 +94,39 @@ Page({
   },
 
   onClickAccountList: function() {
+    if (wx.user.userId == null) {
+      wx.navigateTo({
+        url: '../login/login',
+      });
+      return;
+    }
+
     wx.navigateTo({
       url: '../account_list/account_list',
     });
   },
 
   onClickMyPublished: function () {
+    if (wx.user.userId == null) {
+      wx.navigateTo({
+        url: '../login/login',
+      });
+      return;
+    }
+
     wx.navigateTo({
       url: '../my_published/my_published',
     });
   },
 
   onClickMyBuyed: function () {
+    if (wx.user.userId == null) {
+      wx.navigateTo({
+        url: '../login/login',
+      });
+      return;
+    }
+
     wx.navigateTo({
       url: '../my_buyed/my_buyed',
     });

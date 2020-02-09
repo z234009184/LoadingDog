@@ -3,6 +3,7 @@
 .container {
   align-items: stretch;
   background-color: white;
+  height: 100%;
 }
 
 image {

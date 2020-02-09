@@ -197,6 +197,15 @@ Page({
 
 // 查询安装图
   onClickQuery: function() {
+    
+    if (wx.user.userId == null) {
+      wx.navigateTo({
+        url: '../login/login',
+      });
+      return ;
+    }
+
+
     if (this.data.selectedVersion.id == null) {
       wx.showToast({
         title: '请选择品牌和车型',
